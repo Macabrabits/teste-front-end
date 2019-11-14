@@ -19,6 +19,12 @@ let lastSearch = ''
 let sleeping = false
 
 
+
+
+
+
+
+
 export default function Search(){
 
     const sleep = (milliseconds) => {
@@ -56,14 +62,8 @@ export default function Search(){
             }})
 
         lastSearch = search
-
-        // document.getElementById("animatedForm").classList.remove("center")
         document.getElementById("animatedForm").classList.add("up")
-
-        console.log(res.data)
-
         setThumbnails(res.data.items)
-        // setThumbnails([...thumbnails, ...res.data.items])
         nextPageToken = res.data.nextPageToken
 
     }
@@ -91,14 +91,16 @@ export default function Search(){
         <div className="row mt-5">
             <form onSubmit={submit} className="center mb-5 col-12" id="animatedForm">
                     <TextField
-                        className={"animated bounce delay-2 col-sm-12 col-md-6 mx-auto"}
+                        className={"col-sm-12 col-md-6 mx-auto"}
                         id="input-with-icon-textfield"
                         label="Pesquisar"
                         InputProps={{
                             endAdornment: (
-                                <InputAdornment position="start">
+                                <button>
+                                <InputAdornment position="start" type="submit">
                                     <SearchIcon/>
                                 </InputAdornment>
+                                </button>
                             ),
                         }}
                         onChange={e => setSearch(e.target.value)}

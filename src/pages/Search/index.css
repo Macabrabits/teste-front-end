@@ -26,6 +26,10 @@ form{
 }
 
 .up{
-    top: 3vh !important;
+    top: 20px !important;
 }
 
+button{
+    border: none;
+    background: none;
+}
