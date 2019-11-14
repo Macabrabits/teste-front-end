@@ -1,0 +1,20 @@
+.thumbnail{
+    margin: 20px 0px;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+.thumbnail h1, h2, h3, h4, h5 p{
+    margin: 0em;
+
+}
+
+.thumbnail{
+    box-shadow: 5px 5px 3px grey;
+}
+
+p{
+    font-size: small;
+}
